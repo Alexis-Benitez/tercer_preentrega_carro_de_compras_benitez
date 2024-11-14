@@ -1,0 +1,153 @@
+/* Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Sección de Productos */
+.productos {
+    padding: 20px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.producto-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+.producto-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.producto-card p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #777;
+}
+
+.boton-agregar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.boton-agregar:hover {
+    background-color: #218838;
+}
+
+/* Sección del Carrito */
+.carrito {
+    padding: 20px;
+}
+
+.carrito ul {
+    list-style: none;
+}
+
+.carrito li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrito-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f4f4f9;
+    border-top: 1px solid #ddd;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.boton-vaciar {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-vaciar:hover {
+    background-color: #c82333;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.producto-card, .carrito li {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .carrito-footer {
+        flex-direction: column;
+    }
+}

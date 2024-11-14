@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda Online</h1>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#carrito">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Productos -->
+        <section id="productos" class="productos">
+            <h2>Nuestros Productos</h2>
+            <div id="lista-productos" class="productos-grid"></div>
+        </section>
+
+        <!-- Sección del Carrito -->
+        <section id="carrito" class="carrito">
+            <h2>Tu Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <div class="carrito-footer">
+                <p id="total">Total: $0.00</p>
+                <button id="vaciar-carrito" class="boton-vaciar">Vaciar Carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Vinculación de Archivos JavaScript -->
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/eventos.js"></script>
+    <script src="js/utilidades.js"></script>
+    <script src="js/carritoEventos.js"></script>
+    <script src="js/productosEventos.js"></script>
+    <script src="js/estilosDinamicos.js"></script>
+    <script src="js/filtros.js"></script>
+</body>
+</html>
